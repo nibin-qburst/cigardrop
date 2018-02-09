@@ -61,6 +61,11 @@ class Login extends Component {
       event.preventDefault();
     }
 
+  /**
+   * @name validateForm()
+   * @desc  Checks whether both username and password is empty
+   */
+
     validateForm() {
       return this.state.username.length > 0 && this.state.password.length > 0;
     }

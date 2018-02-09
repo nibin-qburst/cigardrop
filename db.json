@@ -1,0 +1,295 @@
+{
+  "users": [
+    {
+      "username": "abc@gmail.com",
+      "password": "abc"
+    },
+    {
+      "username": "xyz@gmail.com",
+      "password": "xyz"
+    },
+    {
+      "username": "efg@gmail.com",
+      "password": "efg"
+    },
+    {
+      "username": "mno@gmail.com",
+      "password": "mno"
+    }
+  ],
+  "cart": [],
+  "products": [
+    {
+      "id": 1,
+      "name": "Cigar #1",
+      "price": 150,
+      "cart_quantity": 7,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Cigar #2",
+      "price": 100,
+      "cart_quantity": 1,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/UP18BE.jpg/220/220",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cigar #3",
+      "price": 80,
+      "cart_quantity": 1,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Cigar #4",
+      "price": 95,
+      "cart_quantity": 2,
+      "imageURL": "http://www.stickpng.com/assets/images/58da60d65f58be1227aec946.png",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Cigar #5",
+      "price": 150,
+      "cart_quantity": 0,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Cigar #6",
+      "price": 65,
+      "cart_quantity": 2,
+      "imageURL": "http://clipart-library.com/data_images/98070.png",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Cigar #7",
+      "price": 82,
+      "cart_quantity": 2,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Cigar #8",
+      "price": 150,
+      "cart_quantity": 1,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/UP18BE.jpg/220/220",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Cigar #9",
+      "price": 50,
+      "cart_quantity": 0,
+      "imageURL": "http://clipart-library.com/data_images/98070.png",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Cigar #10",
+      "price": 100,
+      "cart_quantity": 0,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/UP18BE.jpg/220/220",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Cigar #11",
+      "price": 80,
+      "cart_quantity": 0,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Cigar #12",
+      "price": 95,
+      "cart_quantity": 0,
+      "imageURL": "http://www.stickpng.com/assets/images/58da60d65f58be1227aec946.png",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Cigar #13",
+      "price": 150,
+      "cart_quantity": 1,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Cigar #14",
+      "price": 65,
+      "cart_quantity": 0,
+      "imageURL": "http://clipart-library.com/data_images/98070.png",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Cigar #15",
+      "price": 82,
+      "cart_quantity": 2,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Cigar #16",
+      "price": 150,
+      "cart_quantity": 0,
+      "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/UP18BE.jpg/220/220",
+      "geolocation": [
+        {
+          "latitude": 0,
+          "longitude": 0
+        },
+        {
+          "latitude": 0,
+          "longitude": 0
+        }
+      ]
+    }
+  ]
+}

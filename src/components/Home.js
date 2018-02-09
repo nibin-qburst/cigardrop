@@ -35,6 +35,13 @@ class Product extends Component {
     );
     }
 
+    /**
+     * @name handleClick()
+     * @param event
+     * @param product
+     * @desc The quantity count in the json is incremented by 1 once you click on the 'add to cart' button 
+     */    
+
     handleClick(event, product){
         const url = `http://localhost:4000/products/${product.id}`;
         product.cart_quantity++;
@@ -66,6 +73,12 @@ class Home extends Component {
         });
     }
 
+    /**
+     * @name updateCartQuantity()
+     * @param product
+     * @desc The floating cart button count is updated once the add to cart button in the prduct is clicked
+     */
+
     updateCartQuantity(product){
         let cart_count = 0;
         this.state.products.map((elem) => {
@@ -79,6 +92,11 @@ class Home extends Component {
         }, 0);
         this.setState({ cart_count: cart_count, products:this.state.products }) ;
     }
+
+    /**
+     * @name change()
+     * @desc Once the filter selectbox is changed product list is sorted according to the value
+     */
 
     change(event){
         var option = event.target.value;

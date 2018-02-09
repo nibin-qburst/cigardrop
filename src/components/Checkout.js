@@ -9,18 +9,15 @@ class Checkout extends Component {
   constructor(){
     super();
     this.state={
-        products:[]
+        products:[],
+        open: false
     }
     const url = `http://localhost:4000/products/`;
     let products = axios.get(url).then(response => {
       this.setState({ products: response.data }) ;
     });
   }
-
-  state = {
-    open: false,
-  };
- 
+  
   onOpenModal = () => {
     this.setState({ open: true });
   };
@@ -28,65 +25,61 @@ class Checkout extends Component {
   onCloseModal = () => {
     this.setState({ open: false });
   };
-    render(){
-      const { open } = this.state;
-      var rowComponents = this.generateRows();
-        return(
-        <div className="checkout">
-          <div className="row mb-4">
-            <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-              <div className="card">
-                <div className="card-body">
-                  <h5 className="card-title mb-4">Check Out</h5>
-                  <div className="row">
-                    <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <table className="table table-striped">
-                      <thead>
-                        <tr>
-                        <th></th>
-                        <th>Product Name</th>
-                        <th>Quantity</th>
-                        <th>Price</th>
-                        <th>View on Map</th>
-                        </tr>
-                    </thead>
-                        <tbody>
-                            {rowComponents}
-                        </tbody>
-                      </table>
-                    </div>
+
+  render(){
+    const { open } = this.state;
+    var rowComponents = this.generateRows();
+      return(
+      <div className="checkout">
+        <div className="row mb-4">
+          <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+            <div className="card">
+              <div className="card-body">
+                <h5 className="card-title mb-4">Check Out</h5>
+                <div className="row">
+                  <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <table className="table table-striped">
+                    <thead>
+                      <tr>
+                      <th></th>
+                      <th>Product Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                      <th>View on Map</th>
+                      </tr>
+                  </thead>
+                      <tbody>
+                          {rowComponents}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
-                <div className="mb-3">
-                  <Link to={`/confirmation`} title="Confirmation" className="btn btn-outline-success btn-sm">Confirm</Link>
-                </div>
+              </div>
+              <div className="mb-3">
+                <Link to={`/confirmation`} title="Confirmation" className="btn btn-outline-success btn-sm">Confirm</Link>
               </div>
             </div>
           </div>
-          <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={open} onClose={this.onCloseModal}>
-            <h5>Map Location</h5>
-                  <div class="row">
-                    <div class="col-12">
-                      <div class="mb-4">
-                      <GoogleApiWrapper></GoogleApiWrapper>
-                      </div>
-                     </div>
-            </div>
-            </Modal>
         </div>
-        
-        )
-    }
-
-
-    generateHeaders() {
-      var cols = this.props.cols;  // [{key, label}]
-
-      // generate our header (th) cell components
-      return cols.map(function(colData) {
-          return <th key={colData.key}> {colData.label} </th>;
-      });
+        <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={open} onClose={this.onCloseModal}>
+          <h5>Map Location</h5>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="mb-4">
+                    <GoogleApiWrapper></GoogleApiWrapper>
+                    </div>
+                    </div>
+          </div>
+          </Modal>
+      </div>
+      
+      )
   }
+
+  /**
+   * @name generateRows()
+   * @desc Used to generate the rows for the checkout table
+   */
 
   generateRows() {
       var data = this.state.products;
