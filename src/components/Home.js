@@ -82,21 +82,17 @@ class Home extends Component {
 
     change(event){
         var option = event.target.value;
-        console.log(option);
         let arr;
         if(option == 'price_asc'){
             arr = this.state.products.sort((a, b) => {
-                console.log(a.price, b.price)
-                return a.price > b.price;
+                return parseFloat(a.price) - parseFloat(b.price);
             });
         }else if(option == 'price_desc'){
             arr = this.state.products.sort((a, b)=>{
-                return b.price > a.price;
+                return parseFloat(b.price) - parseFloat(a.price);
             });
         }
-        console.log(arr);
-        
-        //this.setState({value: event.target.value});
+        this.setState({products: arr});
     }
     
     render(){
@@ -117,7 +113,6 @@ class Home extends Component {
                                             <option value="">Sort Items By:</option>
                                             <option value="price_asc">Price: Low to High</option>
                                             <option value="price_desc">Price: High to Low</option>
-                                            <option value="rating">Rating</option>
                                         </select>
                                     </div>
                                     </div>
