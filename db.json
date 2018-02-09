@@ -23,7 +23,7 @@
       "id": 1,
       "name": "Cigar #1",
       "price": 150,
-      "cart_quantity": 7,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
       "geolocation": [
         {
@@ -40,7 +40,7 @@
       "id": 2,
       "name": "Cigar #2",
       "price": 100,
-      "cart_quantity": 1,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/UP18BE.jpg/220/220",
       "geolocation": [
         {
@@ -57,7 +57,7 @@
       "id": 3,
       "name": "Cigar #3",
       "price": 80,
-      "cart_quantity": 1,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
       "geolocation": [
         {
@@ -74,7 +74,7 @@
       "id": 4,
       "name": "Cigar #4",
       "price": 95,
-      "cart_quantity": 2,
+      "cart_quantity": 0,
       "imageURL": "http://www.stickpng.com/assets/images/58da60d65f58be1227aec946.png",
       "geolocation": [
         {
@@ -108,7 +108,7 @@
       "id": 6,
       "name": "Cigar #6",
       "price": 65,
-      "cart_quantity": 2,
+      "cart_quantity": 0,
       "imageURL": "http://clipart-library.com/data_images/98070.png",
       "geolocation": [
         {
@@ -125,7 +125,7 @@
       "id": 7,
       "name": "Cigar #7",
       "price": 82,
-      "cart_quantity": 2,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
       "geolocation": [
         {
@@ -142,7 +142,7 @@
       "id": 8,
       "name": "Cigar #8",
       "price": 150,
-      "cart_quantity": 1,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/UP18BE.jpg/220/220",
       "geolocation": [
         {
@@ -227,7 +227,7 @@
       "id": 13,
       "name": "Cigar #13",
       "price": 150,
-      "cart_quantity": 1,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
       "geolocation": [
         {
@@ -261,7 +261,7 @@
       "id": 15,
       "name": "Cigar #15",
       "price": 82,
-      "cart_quantity": 2,
+      "cart_quantity": 0,
       "imageURL": "https://d2jkh6o5ezxqxc.cloudfront.net/images/item/main/LLCG.jpg",
       "geolocation": [
         {
