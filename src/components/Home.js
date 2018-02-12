@@ -100,6 +100,8 @@ class Home extends Component {
             arr = this.state.products.sort((a, b)=>{
                 return parseFloat(b.price) - parseFloat(a.price);
             });
+        }else{
+            arr = this.state.products;
         }
         
         this.setState({products: arr,sort: option});
