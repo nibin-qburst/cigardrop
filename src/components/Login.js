@@ -31,7 +31,7 @@ class Login extends Component {
                       </div>
                       <div className="form-group d-flex align-items-center justify-content-between">
                         <div className="form-check"><label><input type="checkbox" className="form-check-input"/>Remember me<i className="input-helper"></i></label></div>
-                        <button  className="forgot-pass">Forgot password</button>
+                        <a href="#" className="forgot-pass">Forgot password</a>
                       </div>
                       <div className="text-center">
                       <button disabled={!this.validateForm()} className="btn btn-primary btn-block enter-btn" onClick={(event) => this.handleClick(event)}>LOG IN</button>

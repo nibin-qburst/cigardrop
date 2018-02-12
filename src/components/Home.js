@@ -101,7 +101,8 @@ class Home extends Component {
                 return parseFloat(b.price) - parseFloat(a.price);
             });
         }
-        this.setState({products: arr});
+        
+        this.setState({products: arr,sort: option});
     }
     
     render(){
