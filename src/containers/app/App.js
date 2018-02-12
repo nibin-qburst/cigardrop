@@ -10,7 +10,7 @@ import Confirmation from '../../components/confirmation';
 import AuthLayout from '../auth';
 import DefaultLayout from '../main';
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
       <Router>
       <div className="App">
           <Switch>  
-              <AuthLayout exact path="/" component={Login} />
+              <Route exact path="/" render={() => (<Redirect to="/login" />)} /> 
               <AuthLayout path='/login' component={Login} />
               <DefaultLayout exact path='/dashboard' component={Home} />
               <DefaultLayout path='/checkout' component={Checkout} />
