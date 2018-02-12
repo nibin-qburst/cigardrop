@@ -13,7 +13,7 @@ class Checkout extends Component {
         open: false
     }
     const url = `http://localhost:4000/products/`;
-    let products = axios.get(url).then(response => {
+    axios.get(url).then(response => {
       this.setState({ products: response.data }) ;
     });
   }
@@ -92,7 +92,7 @@ class Checkout extends Component {
           return (<tr>
                     <td>
                       <div className="flag">
-                      <img src={item.imageURL} alt="image" className="rounded-circle" width="100" height="100"/>
+                      <img src={item.imageURL} alt="" className="rounded-circle" width="100" height="100"/>
                       </div>
                     </td>
                     <td>{item.name}</td>
@@ -103,11 +103,14 @@ class Checkout extends Component {
                       {item.cart_quantity*item.price}
                     </td>
                     <td>
-                        <a onClick={this.onOpenModal} href="#"><i className="fa fa-compass"></i></a>
+                        <a href="javascript:void(0)" onClick={this.onOpenModal}><i className="fa fa-compass"></i></a>
                     </td>
-                  </tr>);}
+                  </tr>);
+                  }else{
+                    return true;
+                  }
       });
-      if(hasQuantity == false){
+      if(hasQuantity === false){
         rows = <tr><td colSpan="6">No products added to cart.</td></tr>;
       }
       return rows;

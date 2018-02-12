@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
 
-import cig1 from '../assets/images/1.png'
-import cig2 from '../assets/images/2.png'
-import cig3 from '../assets/images/3.png'
-import cig4 from '../assets/images/4.png'
-
 import axios from 'axios';
 
 class Product extends Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return ( 
@@ -19,7 +10,7 @@ class Product extends Component {
                 <div className="card">
                   <div className="card-body">
                     <div className="text-center mb-4">
-                        <img src={this.props.product.imageURL} alt="image" className="rounded-circle" width="100" height="100"/>
+                        <img src={this.props.product.imageURL} alt="" className="rounded-circle" width="100" height="100"/>
                     </div>
                     <h6 className="card-subtitle mb-4">{this.props.product.name}</h6>
                     <p className="text-muted">
@@ -45,9 +36,9 @@ class Product extends Component {
     handleClick(event, product){
         const url = `http://localhost:4000/products/${product.id}`;
         product.cart_quantity++;
-        let products = axios.put(url, product).then(response => {
-                            this.props.addToCartClicked(product);
-                        });
+        axios.put(url, product).then(response => {
+            this.props.addToCartClicked(product);
+        });
         event.preventDefault();
     }
     
@@ -63,7 +54,7 @@ class Home extends Component {
         }
         this.updateCartQuantity = this.updateCartQuantity.bind(this);
         const url = `http://localhost:4000/products/`;
-        let products = axios.get(url).then(response => {
+        axios.get(url).then(response => {
             this.setState({ products: response.data }) ;
             let count = 0;
             count = response.data.reduce((total, b) => {
@@ -82,7 +73,7 @@ class Home extends Component {
     updateCartQuantity(product){
         let cart_count = 0;
         this.state.products.map((elem) => {
-            if(elem.id == product.id){
+            if(elem.id === product.id){
                 elem.cart_quantity = product.cart_quantity;
             }
         });
@@ -101,11 +92,11 @@ class Home extends Component {
     change(event){
         var option = event.target.value;
         let arr;
-        if(option == 'price_asc'){
+        if(option === 'price_asc'){
             arr = this.state.products.sort((a, b) => {
                 return parseFloat(a.price) - parseFloat(b.price);
             });
-        }else if(option == 'price_desc'){
+        }else if(option === 'price_desc'){
             arr = this.state.products.sort((a, b)=>{
                 return parseFloat(b.price) - parseFloat(a.price);
             });
@@ -150,7 +141,7 @@ class Home extends Component {
             <div className="cart-box" id="Normal">
                 <ul className="nav navbar-nav">
                     <li className="dropdown">
-                    <button href="#" className="btn btn-primary btn-circle btn-xl" data-toggle="dropdown" role="button" aria-expanded="false"> <span className="fa fa-shopping-cart"></span></button>
+                    <button href="#" className="btn btn-primary btn-circle btn-xl"> <span className="fa fa-shopping-cart"></span></button>
                     <span  className="cart-items-count"><span className="notification-counter">{this.state.cart_count}</span></span>
                     </li>
                 </ul>

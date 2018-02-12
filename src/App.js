@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import './assets/css/bootstrap.min.css'
 
@@ -9,7 +8,7 @@ import Checkout from './components/Checkout';
 import Confirmation from './components/Confirmation';
 
 import Navbar from './components/layout/Navbar'
-import { BrowserRouter as Router, Switch, Route, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Sidebar from './components/layout/Sidebar';
 
 const AuthLayout = ({component: Component, ...rest}) => {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 class Login extends Component {
@@ -52,7 +51,7 @@ class Login extends Component {
                         password: this.state.password
                       }
       }).then(response => {
-        if(response.data.length == 1){
+        if(response.data.length === 1){
           this.props.history.push('/dashboard')
         }else{
           this.setState({message:'Incorrect username or password'});
