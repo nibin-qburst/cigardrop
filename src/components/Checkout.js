@@ -83,9 +83,12 @@ class Checkout extends Component {
 
   generateRows() {
       var data = this.state.products;
-      return data.map((item) => {
+      var hasQuantity = false;
+      var rows = '';
+      rows = data.map((item) => {
           // handle the column data within each row
-          if(item.cart_quantity > 0)
+          if(item.cart_quantity > 0){
+          hasQuantity = true;
           return (<tr>
                     <td>
                       <div className="flag">
@@ -102,8 +105,12 @@ class Checkout extends Component {
                     <td>
                         <a onClick={this.onOpenModal} href="#"><i className="fa fa-compass"></i></a>
                     </td>
-                  </tr>);
+                  </tr>);}
       });
+      if(hasQuantity == false){
+        rows = <tr><td colspan="6">No products added to cart.</td></tr>;
+      }
+      return rows;
   }
 }
 
