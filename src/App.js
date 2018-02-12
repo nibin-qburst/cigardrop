@@ -31,9 +31,11 @@ const DefaultLayout = ({component: Component, ...rest}) => {
       <div className="container-scroller">
       <Navbar></Navbar>
       <div className="container-fluid">
+        <div className="row row-offcanvas row-offcanvas-right">
         <Sidebar></Sidebar>
         <div className="content-wrapper">
             <Component {...matchProps} />
+        </div>
         </div>
     </div>
     </div>

@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 class Sidebar extends Component {
     render(){
         return(
-            <div className="row row-offcanvas row-offcanvas-right">
+            <div>
         <nav className="bg-white sidebar sidebar-offcanvas" id="sidebar">
           <div className="user-info">
             <img src="https://www.w3schools.com/howto/img_avatar.png" alt=""/>
