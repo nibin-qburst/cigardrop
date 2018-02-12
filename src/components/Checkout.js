@@ -85,11 +85,11 @@ class Checkout extends Component {
       var data = this.state.products;
       var hasQuantity = false;
       var rows = '';
-      rows = data.map((item) => {
+      rows = data.map((item, i) => {
           // handle the column data within each row
           if(item.cart_quantity > 0){
           hasQuantity = true;
-          return (<tr>
+          return (<tr key={i}>
                     <td>
                       <div className="flag">
                       <img src={item.imageURL} alt="" className="rounded-circle" width="100" height="100"/>
