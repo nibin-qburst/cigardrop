@@ -122,7 +122,7 @@ class Home extends Component {
                                 <div className="col-sm-3 pull-right">
                                     <div className="form-group">
                                         <select onChange={this.change.bind(this)} name="filter_type" id="filter_type" className="form-control" value={this.state.sort}>
-                                            <option value="">Sort Items By:</option>
+                                            <option value="" disabled>Sort Items By:</option>
                                             <option value="price_asc">Price: Low to High</option>
                                             <option value="price_desc">Price: High to Low</option>
                                         </select>
