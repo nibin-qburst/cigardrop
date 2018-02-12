@@ -108,7 +108,7 @@ class Checkout extends Component {
                   </tr>);}
       });
       if(hasQuantity == false){
-        rows = <tr><td colspan="6">No products added to cart.</td></tr>;
+        rows = <tr><td colSpan="6">No products added to cart.</td></tr>;
       }
       return rows;
   }
