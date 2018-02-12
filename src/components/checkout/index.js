@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import GoogleApiWrapper from './GoogleApiWrapper';
+import GoogleApiWrapper from '../../common/components/google-map';
 import Modal from 'react-responsive-modal';
 import axios from 'axios';
 
@@ -63,9 +63,9 @@ class Checkout extends Component {
         </div>
         <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={open} onClose={this.onCloseModal}>
           <h5>Map Location</h5>
-                <div class="row">
-                  <div class="col-12">
-                    <div class="mb-4">
+                <div className="row">
+                  <div className="col-12">
+                    <div className="mb-4">
                     <GoogleApiWrapper></GoogleApiWrapper>
                     </div>
                     </div>

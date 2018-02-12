@@ -24,10 +24,10 @@ class Login extends Component {
                     )}
                     <form>
                       <div className="form-group">
-                        <input type="text" className="form-control p_input" placeholder="Username" onChange = {(event,newValue) => this.setState({username:event.target.value})}/>
+                        <input type="text" className="form-control p_input" placeholder="Username" onChange = {(event,newValue) => this.setState({username:event.target.value})} />
                       </div>
                       <div className="form-group">
-                        <input type="password" className="form-control p_input" placeholder="Password" onChange = {(event) => this.setState({password:event.target.value})}/>
+                        <input type="password" className="form-control p_input" placeholder="Password" onChange = {(event) => this.setState({password:event.target.value})} autoComplete="new-password"/>
                       </div>
                       <div className="form-group d-flex align-items-center justify-content-between">
                         <div className="form-check"><label><input type="checkbox" className="form-check-input"/>Remember me<i className="input-helper"></i></label></div>

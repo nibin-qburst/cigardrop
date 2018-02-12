@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 class Product extends Component {
@@ -144,7 +144,7 @@ class Home extends Component {
             <div className="cart-box" id="Normal">
                 <ul className="nav navbar-nav">
                     <li className="dropdown">
-                    <button href="#" className="btn btn-primary btn-circle btn-xl"> <span className="fa fa-shopping-cart"></span></button>
+                    <Link to={`/checkout`} title="Checkout" className="btn btn-primary btn-circle btn-xl"><span className="fa fa-shopping-cart"></span></Link>
                     <span  className="cart-items-count"><span className="notification-counter">{this.state.cart_count}</span></span>
                     </li>
                 </ul>
