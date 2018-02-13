@@ -1,35 +1,40 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import GoogleApiWrapper from '../../common/components/google-map';
-import Modal from 'react-responsive-modal';
-import axios from 'axios';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import MapContainer from "../../common/components/google-map";
+import Modal from "react-responsive-modal";
+import axios from "axios";
 
 class Checkout extends Component {
-
-  constructor(){
+  constructor() {
     super();
-    this.state={
-        products:[],
-        open: false
-    }
+    this.state = {
+      products: [],
+      open: false,
+      geolocation: []
+    };
     const url = `http://localhost:4000/products/`;
     axios.get(url).then(response => {
-      this.setState({ products: response.data }) ;
+      this.setState({ products: response.data });
     });
   }
-  
+
   onOpenModal = () => {
     this.setState({ open: true });
   };
- 
+
   onCloseModal = () => {
     this.setState({ open: false });
   };
 
-  render(){
+  showMap(item) {
+    this.setState({ geolocation: item.geolocation });
+    this.onOpenModal();
+  }
+
+  render() {
     const { open } = this.state;
     var rowComponents = this.generateRows();
-      return(
+    return (
       <div className="checkout">
         <div className="row mb-4">
           <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -39,41 +44,48 @@ class Checkout extends Component {
                 <div className="row">
                   <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <table className="table table-striped">
-                    <thead>
-                      <tr>
-                      <th></th>
-                      <th>Product Name</th>
-                      <th>Quantity</th>
-                      <th>Price</th>
-                      <th>View on Map</th>
-                      </tr>
-                  </thead>
-                      <tbody>
-                          {rowComponents}
-                      </tbody>
+                      <thead>
+                        <tr>
+                          <th />
+                          <th>Product Name</th>
+                          <th>Quantity</th>
+                          <th>Price</th>
+                          <th>View on Map</th>
+                        </tr>
+                      </thead>
+                      <tbody>{rowComponents}</tbody>
                     </table>
                   </div>
                 </div>
               </div>
               <div className="mb-3">
-                <Link to={`/confirmation`} title="Confirmation" className="btn btn-outline-success btn-sm">Confirm</Link>
+                <Link
+                  to={`/confirmation`}
+                  title="Confirmation"
+                  className="btn btn-outline-success btn-sm"
+                >
+                  Confirm
+                </Link>
               </div>
             </div>
           </div>
         </div>
-        <Modal classNames={{ overlay: 'custom-overlay', modal: 'custom-modal' }} open={open} onClose={this.onCloseModal}>
+        <Modal
+          classNames={{ overlay: "custom-overlay", modal: "custom-modal" }}
+          open={open}
+          onClose={this.onCloseModal}
+        >
           <h5>Map Location</h5>
-                <div className="row">
-                  <div className="col-12">
-                    <div className="mb-4">
-                    <GoogleApiWrapper></GoogleApiWrapper>
-                    </div>
-                    </div>
+          <div className="row">
+            <div className="col-12">
+              <div className="mb-4">
+                <MapContainer value={this.state.geolocation} />
+              </div>
+            </div>
           </div>
-          </Modal>
+        </Modal>
       </div>
-      
-      )
+    );
   }
 
   /**
@@ -82,39 +94,49 @@ class Checkout extends Component {
    */
 
   generateRows() {
-      var data = this.state.products;
-      var hasQuantity = false;
-      var rows = '';
-      rows = data.map((item, i) => {
-          // handle the column data within each row
-          if(item.cart_quantity > 0){
-          hasQuantity = true;
-          return (<tr key={i}>
-                    <td>
-                      <div className="flag">
-                      <img src={item.imageURL} alt="" className="rounded-circle" width="100" height="100"/>
-                      </div>
-                    </td>
-                    <td>{item.name}</td>
-                    <td className="text-center">
-                      {item.cart_quantity}
-                    </td>
-                    <td className="text-right">
-                      {item.cart_quantity*item.price}
-                    </td>
-                    <td>
-                        <a href="javascript:void(0)" onClick={this.onOpenModal}><i className="fa fa-compass"></i></a>
-                    </td>
-                  </tr>);
-                  }else{
-                    return true;
-                  }
-      });
-      if(hasQuantity === false){
-        rows = <tr><td colSpan="6">No products added to cart.</td></tr>;
+    var data = this.state.products;
+    var hasQuantity = false;
+    var rows = "";
+    rows = data.map((item, i) => {
+      // handle the column data within each row
+      if (item.cart_quantity > 0) {
+        hasQuantity = true;
+        return (
+          <tr key={i}>
+            <td>
+              <div className="flag">
+                <img
+                  src={item.imageURL}
+                  alt=""
+                  className="rounded-circle"
+                  width="100"
+                  height="100"
+                />
+              </div>
+            </td>
+            <td>{item.name}</td>
+            <td className="text-center">{item.cart_quantity}</td>
+            <td className="text-right">{item.cart_quantity * item.price}</td>
+            <td>
+              <a href="javascript:void(0)" onClick={() => this.showMap(item)}>
+                <i className="fa fa-compass" />
+              </a>
+            </td>
+          </tr>
+        );
+      } else {
+        return true;
       }
-      return rows;
+    });
+    if (hasQuantity === false) {
+      rows = (
+        <tr>
+          <td colSpan="6">No products added to cart.</td>
+        </tr>
+      );
+    }
+    return rows;
   }
 }
 
-export default Checkout; 
+export default Checkout;

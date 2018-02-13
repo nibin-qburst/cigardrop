@@ -23,90 +23,89 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 html,
 body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 #map {
-	height: 100%;
+  height: 100%;
 }
 
-.custom-modal{
-  width:70%;
+.custom-modal {
+  width: 70%;
   margin-top: 40px;
 }
 
-.checkout .fa-compass{
+.checkout .fa-compass {
   font-size: 22px;
 }
 
-
-
-.cart-box{
+.cart-box {
   position: fixed;
-bottom: 40px;
-right: 30px;
-width: 48px;
-height: 48px;
-z-index: 2147483000;
-cursor: pointer;
-background-position: 50%;
+  bottom: 40px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  z-index: 2147483000;
+  cursor: pointer;
+  background-position: 50%;
 }
 
 .btn-circle {
-width: 30px;
-height: 30px;
-text-align: center;
-padding: 6px 0;
-font-size: 12px;
-line-height: 1.428571429;
-border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
 }
 .btn-circle.btn-lg {
-width: 50px;
-height: 50px;
-padding: 10px 16px;
-font-size: 18px;
-line-height: 1.33;
-border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 25px;
 }
 .btn-circle.btn-xl {
   width: 50px;
   height: 50px;
   padding: 9px 10px;
-font-size: 24px;
-line-height: 1.33;
-border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
 }
-.cart-items-count{
- position:relative;
- display:flex;
- text-align:center;
- justify-content: center;
- top:-55px;
-}
-
-.notification-counter {   
- position: absolute;
- left: 8px;
- background-color: #2bb415;
- color: #fff;
- border-radius: 3px;
- padding: 1px 3px;
- font-size: 10px;
- font-weight: bold;
+.cart-items-count {
+  position: relative;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  top: -55px;
 }
 
-.quantityBox{
+.notification-counter {
+  position: absolute;
+  left: 8px;
+  background-color: #2bb415;
+  color: #fff;
+  border-radius: 3px;
+  padding: 1px 3px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.quantityBox {
   width: 70px;
   text-align: center;
 }
-
-
-
